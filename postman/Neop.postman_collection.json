@@ -1,0 +1,296 @@
+{
+  "info": {
+    "_postman_id": "f618e246-3dae-44ca-9bff-947288eff424",
+    "name": "Neop",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29293752"
+  },
+  "item": [
+    {
+      "name": "storeUser",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "nashaat",
+              "type": "text",
+              "uuid": "d1d69cfe-cf14-4761-b217-fdfe770828d4"
+            },
+            {
+              "key": "email",
+              "value": "nashaat@gmail.com",
+              "type": "text",
+              "uuid": "cfba68d5-7800-40f7-a055-b418f45f6312"
+            },
+            {
+              "key": "password",
+              "value": "123456789",
+              "type": "text",
+              "uuid": "e71a294b-e6e4-400f-93cb-ba182274c177"
+            },
+            {
+              "key": "password_confirmation",
+              "value": "123456789",
+              "type": "text",
+              "uuid": "3b9d7f88-1824-4d57-830f-154943267f6a"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "storeAccounts",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "user_id",
+              "value": "1",
+              "type": "text",
+              "uuid": "d1d69cfe-cf14-4761-b217-fdfe770828d4"
+            },
+            {
+              "key": "name",
+              "value": "nashaattttrrr",
+              "type": "text",
+              "uuid": "b246cf09-b566-4256-8181-396027cb8208"
+            },
+            {
+              "key": "initial_balance",
+              "value": "600",
+              "type": "text",
+              "uuid": "79e493fc-564d-4d34-9847-16966638a281"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/accounts",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "accounts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "transfers",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "from_account_id",
+              "value": "2",
+              "type": "text",
+              "uuid": "d1d69cfe-cf14-4761-b217-fdfe770828d4"
+            },
+            {
+              "key": "to_account_id",
+              "value": "2",
+              "type": "text",
+              "uuid": "013e72ac-6676-4b8f-b471-427e0bfa93e6"
+            },
+            {
+              "key": "amount",
+              "value": "400",
+              "type": "text",
+              "uuid": "64d8c22f-032b-4a0f-87d6-f94246c8d1fb"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/transfers",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "transfers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "transactions",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1|gTfDrxofuJOC4ZcENVzxr17718YkMYlk1GTJYKXI48ce20d8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "coupon_code",
+              "value": "UHAQ####",
+              "type": "text",
+              "uuid": "d1d69cfe-cf14-4761-b217-fdfe770828d4"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/transactions",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "transactions"
+          ],
+          "query": [
+            {
+              "key": "account_id",
+              "value": "1",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TransactionsBetweenAccounts",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "1|gTfDrxofuJOC4ZcENVzxr17718YkMYlk1GTJYKXI48ce20d8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "coupon_code",
+              "value": "UHAQ####",
+              "type": "text",
+              "uuid": "d1d69cfe-cf14-4761-b217-fdfe770828d4"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/transactions/between-accounts?account_id_1=1&account_id_2=2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "transactions",
+            "between-accounts"
+          ],
+          "query": [
+            {
+              "key": "account_id_1",
+              "value": "1"
+            },
+            {
+              "key": "account_id_2",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -40,7 +40,6 @@ return Application::configure(basePath: dirname(__DIR__))
             }
         });
 
-        // Handle validation exceptions
         $exceptions->render(function (ValidationException $e, Request $request) {
             if ($request->expectsJson()) {
                 return response()->json([
@@ -49,4 +48,5 @@ return Application::configure(basePath: dirname(__DIR__))
                 ], 422);
             }
         });
+
     })->create();
